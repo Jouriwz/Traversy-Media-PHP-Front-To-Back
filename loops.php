@@ -35,4 +35,18 @@
         $b++;
     }while($b < 10);
 
+    #Foreach
+    $people = array('Brad', 'Jose', 'William');
+
+    foreach ($people as $person) {
+        echo $person, PHP_EOL;
+    }
+
+    $people = array('cars', 'Jose', 'William');
+
+    foreach ($people as $person) {
+        echo $person, PHP_EOL;
+    }
+
+
 ?>
