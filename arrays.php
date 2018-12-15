@@ -1,5 +1,5 @@
 <?php
-    #Array - veriable that holds multiple values
+    #Array - variable that holds multiple values
     /*
         - Indexed
         - Associative

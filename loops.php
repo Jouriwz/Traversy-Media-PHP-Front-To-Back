@@ -42,19 +42,6 @@
         echo $person, PHP_EOL;
     }
 
-    $people = array('cars', 'Jose', 'William');
-
-    foreach ($people as $person) {
-        echo $person, PHP_EOL;
-    }
-
-    #Foreach
-    $people = array('Brad', 'Jose', 'William');
-
-    foreach ($people as $person) {
-        echo $person, PHP_EOL;
-    }
-
     $cars = array('BWM' => 'Harald Krüger', 'Tesla' => 'Elon Musk', 'Ford' => 'James Hackett');
 
     foreach ($cars as $car => $CEO) {
