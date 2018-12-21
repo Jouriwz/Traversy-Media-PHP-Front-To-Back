@@ -20,11 +20,36 @@
             echo 'Email is Not valid';
         }
     }
+
+    #FILTER_VALIDATE_BOOLEAN
+    #FILTER_VALIDATE_EMAIL
+    #FILTER_VALIDATE_FLOAT
+    #FILTER_VALIDATE_INT
+    #FILTER_VALIDATE_IP
+    #FILTER_VALIDATE_REGEXP
+    #FILTER_VALIDATE_URL
+
+    #FILTER_SANITIZE_EMAIL
+    #FILTER_SANITIZE_ENCODED
+    #FILTER_SANITIZE_NUMBER_FLOAT
+    #FILTER_SANITIZE_NUMBER_INT
+    #FILTER_SANITIZE_SPECIAL_CHARS
+    #FILTER_SANITIZE_STRING
+    #FILTER_SANITIZE_URL
+
+    // $var = 'asdasdasdasdasd';
+
+    // if(filter_var($var, FILTER_VALIDATE_INT)) {
+    //     echo $var. ' is a number';
+    // } else {
+    //     echo $var. ' is not a number';
+    // }
+
+    $var = '33kada23hj232j32323hj';
+    var_dump(filter_var($var, FILTER_SANITIZE_NUMBER_INT))
 ?>
 
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <input type="text" name="data">
     <button type="submit">Submit</button>
 </form>
-
-<!-- 8:50 -->
