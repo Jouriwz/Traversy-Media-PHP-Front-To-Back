@@ -12,7 +12,7 @@
 
         // check required fields
         if (!empty($email) && !empty($name) && !empty($message)) {
-            
+        
             # passed
             // Check Email
             if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
@@ -21,7 +21,31 @@
                 $msgClass = 'alert-danger';
             }else {
                 // Passed
-                echo 'PASSED';
+                // Recipient Email
+                $toEmail = 'test@test.nl';
+                $subject = 'Contact Request From '.$name;
+                $body = '<h2>Contact Request</h2>
+                        <h4>Name</h4><p>'.$name.'</p>
+                        <h4>Email</h4><p>'.$email.'</p>
+                        <h4>Message</h4><p>'.$message.'</p>
+                ';
+
+                // Email Headers
+                $headers = "MIME-version: 1.0" ."\r\n";
+                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+                // Additional Headers
+                $headers .= "From: " .$name. "<".$email.">". "\r\n";
+
+                if (mail($toEmail, $subject, $body, $headers)) {
+                    # Email Sent
+                    $msg = 'Your Email has been sent';
+                    $msgClass = 'alert-success';
+                } else {
+                    # Failed
+                    $msg = 'Your email was not sent';
+                    $msgClass = 'alert-danger';
+                }
             }
 
         } else {
